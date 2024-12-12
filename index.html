@@ -34,7 +34,7 @@
       padding: 0 15px;
     }
     .video {
-      margin-bottom: 0px; /* Espacio eliminado entre videos */
+      margin-bottom: 1px; /* Espacio reducido a 1px entre videos */
     }
     .video iframe {
       width: 100%;
@@ -62,6 +62,28 @@
     }
     .hidden {
       display: none;
+    }
+
+    /* Media Queries para pantallas móviles */
+    @media (max-width: 768px) {
+      .video iframe {
+        height: 400px; /* Reducir altura en pantallas más pequeñas */
+      }
+      footer {
+        margin: 20px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 18px; /* Reducir tamaño del título */
+      }
+      header nav a {
+        font-size: 14px; /* Reducir tamaño de los enlaces */
+      }
+      .video iframe {
+        height: 300px; /* Ajustar aún más la altura en pantallas muy pequeñas */
+      }
     }
   </style>
 </head>
